@@ -25,7 +25,7 @@ O cartão **vira ao passar o mouse (hover)** em desktops e **ao toque** em dispo
 ---
 
 ## 📸 Prévia
-![Preview do Cartão](https://via.placeholder.com/600x350?text=Preview+do+Cartao+de+Visitas)
+![Preview do Cartão](https://angela-silva.github.io/meu_cartao/)
 
 ---
 
