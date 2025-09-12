@@ -1,0 +1,177 @@
+:root{
+      --card-w: 320px;
+      --card-h: 200px;
+      --radius: 14px;
+      --accent: #6C63FF;
+    }
+
+    body{
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg,#f3f6ff 0%, #ffffff 100%);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      padding: 40px;
+    }
+
+    /* Container do cartão */
+    .card-wrap{
+      perspective: 1200px; /* profundidade 3D */
+    }
+
+    .card {
+      width: var(--card-w);
+      height: var(--card-h);
+      border-radius: var(--radius);
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(.2,.9,.3,1);
+      box-shadow: 0 10px 30px rgba(16,24,40,0.12);
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Virar no hover (desktop) */
+    .card-wrap:hover .card,
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .side{
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Frente do cartão */
+    .front{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6)),
+        url('img/fotoangela1.png') center/cover no-repeat;
+      color: #fff;
+      padding: 18px;
+      box-sizing: border-box;
+    }
+
+    .front .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.15), rgba(10,10,10,0.45));
+    }
+
+    .front .content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .photo {
+      width: 82px;
+      height: 82px;
+      border-radius: 12px;
+      border: 3px solid rgba(255,255,255,0.55);
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.2);
+    }
+
+    .photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .front .info {
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .role {
+      font-size: 13px;
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    /* Verso do cartão */
+    .back{
+      background: linear-gradient(180deg,#ffffff,#f6f7ff);
+      transform: rotateY(180deg);
+      color: #0b1220;
+      padding: 18px;
+      box-sizing: border-box;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .about {
+      font-size: 13px;
+      line-height: 1.3;
+      color: #24314b;
+      margin-bottom: 6px;
+    }
+
+    .socials {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .socials a{
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: inline-grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: 18px;
+      transition: transform .15s, box-shadow .15s;
+      color: #fff;
+    }
+
+    .socials a:hover{ transform: translateY(-4px); box-shadow: 0 8px 20px rgba(16,24,40,0.12); }
+
+    /* cores aproximadas das marcas */
+    .whatsapp { background: #25D366; }
+    .gmail    { background: #EA4335; }
+    .linkedin { background: #0A66C2; }
+    .github   { background: #171515; }
+    .instagram{
+      background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    .tiktok   { background: linear-gradient(180deg,#000,#111); color: #fff; }
+
+    /* pequenas instruções visuais */
+    .hint {
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* Responsividade */
+    @media (max-width:420px){
+      :root{ --card-w: 300px; --card-h: 190px; }
+    }
