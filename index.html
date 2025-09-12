@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Meu cartão</title>
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <div class="card-wrap" aria-label="Cartão de visitas interativo">
+    <!-- toggling .flip permite funcionar em toque -->
+    <div class="card" id="visitCard" role="button" tabindex="0" aria-pressed="false">
+      <!-- Frente -->
+      <div class="side front" aria-hidden="false">
+        <div class="overlay" aria-hidden="true"></div>
+        <div class="content">
+          <div class="photo" aria-hidden="true">
+            <!-- troque aqui pela sua foto -->
+            <img src="img/fotoangela1.png" alt="Foto de perfil">
+          </div>
+
+          <div class="info">
+            <h3 class="name">Ângela Rocha</h3>
+            <p class="role">Designer | Dev Front-End</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verso -->
+      <div class="side back" aria-hidden="true">
+        <div style="width:100%;">
+          <p class="about"><strong>Sobre:</strong> Olá! Sou Ângela — trabalho com design, marketing digital e desenvolvimento web para empreendedoras. Ajudo a fortalecer sua presença online e automatizar tarefas do dia a dia.</p>
+
+          <div class="socials" aria-label="Redes sociais">
+            <!-- WhatsApp -->
+            <a class="whatsapp" href="https://wa.me/5541999999999" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <!-- Gmail -->
+            <a class="gmail" href="mailto:seuemail@gmail.com" title="Email" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="linkedin" href="https://www.linkedin.com/in/seuusuario" tartarget="_blank" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a class="github" href="https://github.com/seuusuario" target="_blank" title="GitHub" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a class="instagram" href="https://www.instagram.com/seuusuario" target="_blank" title="Instagram" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a class="tiktok" href="https://www.tiktok.com/@seuusuario" target="_blank" title="TikTok" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hint">Passe o mouse para virar • Toque para virar</div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+  </html>
