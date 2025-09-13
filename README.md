@@ -1,4 +1,4 @@
-# meu_cartao
+# meu_cartão
 
 https://github.com/user-attachments/assets/aa1e8837-67a1-406d-abb5-68fada3b69df
 
@@ -49,6 +49,7 @@ Alterar tamanho do cartão → ajuste --card-w e --card-h no :root.
 Substituir fontes → troque a font-family no CSS.
 
 📱 Responsividade
+
 ✅ O cartão se adapta para telas menores (celulares)
 ✅ Suporta toque para virar
 ✅ Suporta teclado (Enter e Espaço) para acessibilidade
