@@ -26,8 +26,8 @@ O cartão **vira ao passar o mouse (hover)** em desktops e **ao toque** em dispo
 
 ---
 
-## 📸 Prévia
-[Preview do Cartão](https://angela-silva.github.io/meu_cartao/)
+## Acesso 
+[Acessar Cartão](https://angela-silva.github.io/meu_cartao/)
 
 ---
 
